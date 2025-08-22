@@ -294,7 +294,7 @@
   )
 )
 
-uidity (lp-tokens uint))
+(define-public (remove-liquidity (lp-tokens uint))
   (let (
       (provider-data (unwrap! (map-get? liquidity-providers tx-sender) ERR-NOT-INITIALIZED))
       (total-lp-tokens (get pool-tokens provider-data))
